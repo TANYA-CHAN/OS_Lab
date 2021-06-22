@@ -1,0 +1,15 @@
+  1   #!/bin/sh
+    2   # lowerit
+    3   # convert all file names in the current directory to lower case
+    4   # only operates on plain files--does not change the name of directories
+    5   # will ask for verification before overwriting an existing file
+    6   for x in `ls`
+    7     do
+    8     if [ ! -f $x ]; then
+    9       continue
+   10       fi
+   11     lc=`echo $x  | tr '[A-Z]' '[a-z]'`
+   12     if [ $lc != $x ]; then
+   13       mv -i $x $l fi
+  done
+
